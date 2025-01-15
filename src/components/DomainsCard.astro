@@ -1,0 +1,103 @@
+---
+import Card from "./Card/index.astro";
+import { LINKS } from "../lib/constants";
+import Button from "./Button.astro";
+import { Icon } from 'astro-icon/components'
+---
+
+<!-- <Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
+  <div class="h-full">
+    <div class="flex flex-col mt-4 w-fit">
+      <h2 class="text-gray-500">Socials</h2>
+      <ul>
+        <li>
+          <a href={LINKS.linkedin} target="_blank">Linkedin</a>
+        </li>
+        <li>
+          <a href={LINKS.github} target="_blank">Github</a>
+        </li>
+        <li>
+          <a href={LINKS.medium} target="_blank">Medium</a>
+        </li>
+        <li>
+          <a href={LINKS.discord} target="_blank">Discord</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Card> -->
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2>Domain Interests</h2>
+    </div>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f4f4f4;
+          margin: 0;
+          overflow: hidden;
+      }
+
+      .word-cloud {
+          position: relative;
+          width: 80vw;
+          height: 80vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          transform: translate(-50%, -50%);
+      }
+
+      .word-cloud span {
+          position: absolute;
+          font-weight: bold;
+          transform-origin: center;
+          transition: transform 0.3s ease-in-out;
+      }
+
+      .word-cloud span:hover {
+          transform: scale(1.2);
+      }
+
+      .priority-1 { font-size: 1.75rem; color: #e74c3c; }
+      .priority-2 { font-size: 1.25rem; color: #3498db; }
+      .priority-3 { font-size: 1rem; color: #2ecc71; }
+      .priority-4 { font-size: 0.75rem; color: #f39c12; }
+      .priority-5 { font-size: 0.75rem; color: #9b59b6; }
+  </style>
+        <div class="flex word-cloud text-xs">
+          <span class="priority-3" style="top: 48%; left: 51%; transform: rotate(0deg);">Full Stack Development</span>
+          <span class="priority-2" style="top: 53%; left: 51%; transform: rotate(00deg);">Microservices</span>
+          <span class="priority-3" style="top: 60%; left: 50%; transform: rotate(0deg);">Distributed System</span>
+          <span class="priority-4" style="top: 58%; left: 50%; transform: rotate(0deg);">Cloud</span>
+          <span class="priority-5" style="top: 57%; left: 80%; transform: rotate(0deg);">SaaS</span>
+          <span class="priority-3" style="top: 63%; left: 109%; transform: rotate(0deg);">MERN/MEAN stack</span>
+          <span class="priority-4" style="top: 48%; left: 110%; transform: rotate(0deg);">Serverless Design</span>
+          <span class="priority-1" style="top: 57%; left: 98%; transform: rotate(0deg);">API First</span>
+          <span class="priority-1" style="top: 55%; left: 123%; transform: rotate(0deg);">LLM</span>
+          <span class="priority-4" style="top: 63%; left: 86%; transform: rotate(0deg);">RAAG</span>
+      </div>
+    </div>
+  </div>
+</Card>
+
+
+<!-- <div class="word-cloud">
+    <span class="priority-1" style="top: 10%; left: 20%; transform: rotate(0deg);">FullStack Development</span>
+    <span class="priority-2" style="top: 40%; left: 10%; transform: rotate(90deg);">Microservices</span>
+    <span class="priority-3" style="top: 60%; left: 60%; transform: rotate(0deg);">Distributed System</span>
+    <span class="priority-4" style="top: 80%; left: 30%; transform: rotate(90deg);">Cloud</span>
+    <span class="priority-5" style="top: 20%; left: 50%; transform: rotate(0deg);">SaaS</span>
+    <span class="priority-3" style="top: 30%; left: 70%; transform: rotate(90deg);">MERN/MEAN stack</span>
+    <span class="priority-2" style="top: 50%; left: 40%; transform: rotate(0deg);">Serverless Design</span>
+    <span class="priority-1" style="top: 70%; left: 20%; transform: rotate(90deg);">API First</span>
+    <span class="priority-4" style="top: 10%; left: 60%; transform: rotate(0deg);">LLM</span>
+    <span class="priority-5" style="top: 80%; left: 80%; transform: rotate(90deg);">RAAG</span>
+</div> -->

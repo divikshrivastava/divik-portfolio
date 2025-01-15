@@ -1,36 +1,43 @@
 ---
 import Card from "./Card/index.astro";
 import { LINKS } from "../lib/constants";
+import Button from "./Button.astro";
+import { Icon } from 'astro-icon/components'
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
   <div class="h-full">
     <header class="flex items-center">
       <h1 class="text-white text-xl font-bold">
-        Let's start working together!
+        Top Skills
       </h1>
     </header>
-    <address class="flex flex-col mt-4">
-      <h2 class="text-gray-500">Contact Details</h2>
-      <p>cavallogianmarco@gmail.com</p>
-      <p>Italy</p>
-    </address>
-    <div class="flex flex-col mt-4 w-fit">
-      <h2 class="text-gray-500">Socials</h2>
-      <ul>
-        <li>
-          <a href={LINKS.linkedin} target="_blank">Linkedin</a>
-        </li>
-        <li>
-          <a href={LINKS.github} target="_blank">Github</a>
-        </li>
-        <li>
-          <a href={LINKS.medium} target="_blank">Medium</a>
-        </li>
-        <li>
-          <a href={LINKS.discord} target="_blank">Discord</a>
-        </li>
-      </ul>
+    <div class="flex gap-1">
+        <Button border={true}>
+          <Icon name="ri:javascript-fill" class="h-6" />
+        </Button>
+        <Button border={true}>
+          <Icon name="ri:reactjs-fill" class="h-6" />
+        </Button>
+        <Button border={true}>
+          <Icon name="ri:java-line" class="h-6" />
+        </Button>
+        <Button border={true}>
+          
+        </Button>
     </div>
-  </div>
+    <div class="flex gap-1">
+        <Button border={true}>
+          <Icon name="ri:bard-fill" class="h-6" />
+        </Button>
+        <Button border={true}>
+          <Icon name="ri:npmjs-fill" class="h-6" />
+        </Button>
+        <Button border={true}>
+          <Icon name="ri:cloud-fill" class="h-6" />
+        </Button>
+        <Button border={true}>
+          <Icon name="ri:chrome-fill" class="h-6" />
+        </Button>
+    </div>
 </Card>

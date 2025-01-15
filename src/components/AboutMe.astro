@@ -2,32 +2,137 @@
 import Card from "./Card/index.astro";
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="Experience">
   <div class="flex flex-col gap-2">
-    <div class="text-sm font-light">
-      <p>
-        Hi, I'm Gianmarco, a front-end software developer from Italy.
-        <br />
-        My primary tools of choice includes:
-      </p>
-      <ul class="list-disc list-inside">
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Solidjs</li>
-        <li>Astro</li>
-        <li>svelte</li>
-        <li>Nodejs</li>
-      </ul>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #121212;
+          color: #ffffff;
+      }
+
+      .experience-container {
+          max-height: 450px; /* Adjust height as needed */
+          overflow-y: auto;
+          padding-right: 10px; /* Add some padding to avoid content overlapping with the scrollbar */
+      }
+
+      .experience-section {
+          margin-bottom: 20px;
+      }
+
+      .company-name {
+          font-size: 1.15rem;
+          font-weight: bold;
+          color: #e63a46;
+          margin-bottom: 5px;
+      }
+
+      .experience-details {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.75rem;
+          color: #b0b0b0;
+          margin-bottom: 5px;
+      }
+
+      .position {
+          font-size: 0.9rem;
+          font-weight: bold;
+          color: #ffffff;
+          margin-bottom: 5px;
+      }
+
+      .description {
+          font-size: 0.8rem;
+          color: #cccccc;
+          line-height: 1.4;
+          margin-bottom: 10px;
+      }
+
+      /* Optional: Customize scrollbar */
+      .experience-container::-webkit-scrollbar {
+          width: 8px;
+      }
+
+      .experience-container::-webkit-scrollbar-thumb {
+          background-color: #5b1a17;
+          border-radius: 10px;
+      }
+
+      .experience-container::-webkit-scrollbar-track {
+          background-color: #2c2c2c;
+          border-radius: 10px;
+      }
+  </style>
+
+  <div class="experience-container">
+    <div class="experience-section">
+      <div class="company-name">TechCorp</div>
+      <div class="experience-details">
+          <span>San Francisco, CA</span>
+          <span>Jan 2020 - Dec 2022</span>
+      </div>
+      <div class="position">Senior Front-End Developer</div>
+      <div class="description">
+          Led the front-end team in developing and maintaining the main web platform. 
+          Improved website performance by 30% through code optimization.
+      </div>
     </div>
-    <p class="text-sm font-light">
-      Beyond coding, I'm passionate about design, illustration, animation and 3D modelling and traveling.
-      An unusual hobby of mine is collecting vintage passports, they're
-      interesting pieces of history to me.
-    </p>
-    <p class="text-sm font-light">
-      While I have some preferred tools, I always choose the best one for the
-      job, even if it's not on my usual list. My goal is to find the right
-      solution for each project.
-    </p>
+
+    <div class="experience-section">
+      <div class="company-name">DesignPro</div>
+      <div class="experience-details">
+          <span>Milan, Italy</span>
+          <span>Mar 2018 - Dec 2019</span>
+      </div>
+      <div class="position">UI/UX Designer</div>
+      <div class="description">
+          Collaborated with cross-functional teams to design user-friendly interfaces. 
+          Enhanced user experience across multiple projects.
+      </div>
+    </div>
+
+    <div class="experience-section">
+      <div class="company-name">Innovate Solutions</div>
+      <div class="experience-details">
+          <span>New York, NY</span>
+          <span>Jan 2017 - Feb 2018</span>
+      </div>
+      <div class="position">Full Stack Developer</div>
+      <div class="description">
+          Developed and maintained end-to-end web applications using MERN stack. 
+          Implemented microservices architecture to enhance scalability.
+      </div>
+    </div>
+
+    <div class="experience-section">
+      <div class="company-name">GlobalTech</div>
+      <div class="experience-details">
+          <span>London, UK</span>
+          <span>Jun 2015 - Dec 2016</span>
+      </div>
+      <div class="position">Software Engineer</div>
+      <div class="description">
+          Worked on distributed systems and cloud-based applications. 
+          Led the transition to a serverless architecture, reducing costs by 20%.
+      </div>
+    </div>
+
+    <div class="experience-section">
+      <div class="company-name">Startup Inc.</div>
+      <div class="experience-details">
+          <span>Berlin, Germany</span>
+          <span>Jan 2014 - May 2015</span>
+      </div>
+      <div class="position">Junior Developer</div>
+      <div class="description">
+          Assisted in building API-first applications and integrating third-party services. 
+          Gained valuable experience in SaaS development.
+      </div>
+    </div>
+  </div>
   </div>
 </Card>
